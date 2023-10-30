@@ -2,8 +2,6 @@
 
 <!-- This file contains a React component in an HTML file. This React code is broken. Fix the THREE bugs in the code so the user can draw cards and reset the deck. Note: The component is correctly described in this file structure. There is no need to change the architecture of any code. -->
 
-<!-- To see this app render, open the file in your browser by going to file >> open file >> and finding the appropriate file location. -->
-
 <!-- HINT: Check the console in the browser developer tools for errors. The lines numbers may not match up exactly with the line numbers in your text editor due to the commented out lines in this file. -->
 
 <!DOCTYPE html>
@@ -65,11 +63,12 @@
         // No need to change anything ABOVE this line ^
 
         return (
+          <>
           <h1>Draw a Card</h1>
-          <button onClick={}>
+          <button onClick={drawCard}>
             Click to Draw a Card
           </button>
-          <button onclick={shuffle}>
+          <button onClick={shuffle}>
             Return Cards and Shuffle Deck
           </button>
           <div style={handStyles}>
@@ -81,8 +80,13 @@
               )
             })}
           </div>
+          </>
         )
       }
+      
+      // Line 68: drawCard should go in the {} to call the drawCard function
+      // Line 71: onclick is corrected to onClick
+      // Line 66 and 83: added fragments to Line 66 (<>) and Line 83 (</>)
 
       // No need to change anything below this line
 
